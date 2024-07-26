@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 app.get('/', (req, res) => {
     res.send("Say hello to my little friend!")
 })
-//add encryption
+
 function encrypt(data, key) {
     const cipherText = CryptoJS.AES.encrypt(data, key).toString();
     return cipherText;
